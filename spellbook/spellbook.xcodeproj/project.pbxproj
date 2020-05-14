@@ -14,6 +14,7 @@
 		D36ACEF6246D7F4200A52046 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D36ACEF5246D7F4200A52046 /* Assets.xcassets */; };
 		D36ACEF9246D7F4200A52046 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D36ACEF8246D7F4200A52046 /* Preview Assets.xcassets */; };
 		D36ACEFC246D7F4200A52046 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D36ACEFA246D7F4200A52046 /* LaunchScreen.storyboard */; };
+		D36ACF05246D818000A52046 /* spells.json in Resources */ = {isa = PBXBuildFile; fileRef = D36ACF04246D818000A52046 /* spells.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D36ACEF8246D7F4200A52046 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D36ACEFB246D7F4200A52046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D36ACEFD246D7F4200A52046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D36ACF04246D818000A52046 /* spells.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = spells.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		D36ACEEB246D7F4000A52046 /* spellbook */ = {
 			isa = PBXGroup;
 			children = (
+				D36ACF03246D815300A52046 /* model */,
 				D36ACEEC246D7F4000A52046 /* AppDelegate.swift */,
 				D36ACEEE246D7F4000A52046 /* SceneDelegate.swift */,
 				D36ACEF3246D7F4000A52046 /* ContentView.swift */,
@@ -76,6 +79,14 @@
 				D36ACEF8246D7F4200A52046 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D36ACF03246D815300A52046 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				D36ACF04246D818000A52046 /* spells.json */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			files = (
 				D36ACEFC246D7F4200A52046 /* LaunchScreen.storyboard in Resources */,
 				D36ACEF9246D7F4200A52046 /* Preview Assets.xcassets in Resources */,
+				D36ACF05246D818000A52046 /* spells.json in Resources */,
 				D36ACEF6246D7F4200A52046 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
