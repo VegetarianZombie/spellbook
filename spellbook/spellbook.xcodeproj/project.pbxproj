@@ -16,6 +16,10 @@
 		D36ACEFC246D7F4200A52046 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D36ACEFA246D7F4200A52046 /* LaunchScreen.storyboard */; };
 		D36ACF05246D818000A52046 /* spells.json in Resources */ = {isa = PBXBuildFile; fileRef = D36ACF04246D818000A52046 /* spells.json */; };
 		D38933EA246F7F06006F02C2 /* spellbookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38933E9246F7F06006F02C2 /* spellbookTests.swift */; };
+		D38933F2246F7FA3006F02C2 /* ImportJSONTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38933F1246F7FA3006F02C2 /* ImportJSONTest.swift */; };
+		D38933F5246F80A8006F02C2 /* test-spells.json in Resources */ = {isa = PBXBuildFile; fileRef = D38933F4246F80A8006F02C2 /* test-spells.json */; };
+		D38933F7246F8424006F02C2 /* ImportedSpell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38933F6246F8424006F02C2 /* ImportedSpell.swift */; };
+		D38933FA246F849E006F02C2 /* SpellImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38933F9246F849E006F02C2 /* SpellImporter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,10 @@
 		D38933E7246F7F06006F02C2 /* spellbookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spellbookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38933E9246F7F06006F02C2 /* spellbookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spellbookTests.swift; sourceTree = "<group>"; };
 		D38933EB246F7F06006F02C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D38933F1246F7FA3006F02C2 /* ImportJSONTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportJSONTest.swift; sourceTree = "<group>"; };
+		D38933F4246F80A8006F02C2 /* test-spells.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "test-spells.json"; sourceTree = "<group>"; };
+		D38933F6246F8424006F02C2 /* ImportedSpell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportedSpell.swift; sourceTree = "<group>"; };
+		D38933F9246F849E006F02C2 /* SpellImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellImporter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,7 @@
 		D36ACF03246D815300A52046 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				D38933F8246F8474006F02C2 /* json */,
 				D38933E2246F7E23006F02C2 /* data */,
 			);
 			path = model;
@@ -139,10 +148,29 @@
 		D38933E8246F7F06006F02C2 /* spellbookTests */ = {
 			isa = PBXGroup;
 			children = (
+				D38933F3246F807E006F02C2 /* test-data */,
 				D38933E9246F7F06006F02C2 /* spellbookTests.swift */,
 				D38933EB246F7F06006F02C2 /* Info.plist */,
+				D38933F1246F7FA3006F02C2 /* ImportJSONTest.swift */,
 			);
 			path = spellbookTests;
+			sourceTree = "<group>";
+		};
+		D38933F3246F807E006F02C2 /* test-data */ = {
+			isa = PBXGroup;
+			children = (
+				D38933F4246F80A8006F02C2 /* test-spells.json */,
+			);
+			path = "test-data";
+			sourceTree = "<group>";
+		};
+		D38933F8246F8474006F02C2 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				D38933F6246F8424006F02C2 /* ImportedSpell.swift */,
+				D38933F9246F849E006F02C2 /* SpellImporter.swift */,
+			);
+			path = json;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D38933F5246F80A8006F02C2 /* test-spells.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +278,9 @@
 			files = (
 				D36ACEF2246D7F4000A52046 /* spellbook.xcdatamodeld in Sources */,
 				D36ACEED246D7F4000A52046 /* AppDelegate.swift in Sources */,
+				D38933FA246F849E006F02C2 /* SpellImporter.swift in Sources */,
 				D36ACEF4246D7F4000A52046 /* ContentView.swift in Sources */,
+				D38933F7246F8424006F02C2 /* ImportedSpell.swift in Sources */,
 				D36ACEEF246D7F4000A52046 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D38933F2246F7FA3006F02C2 /* ImportJSONTest.swift in Sources */,
 				D38933EA246F7F06006F02C2 /* spellbookTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
