@@ -60,14 +60,9 @@
 		D36ACEEB246D7F4000A52046 /* spellbook */ = {
 			isa = PBXGroup;
 			children = (
+				D38933E1246F7E0C006F02C2 /* view */,
+				D38933E0246F7DE5006F02C2 /* app */,
 				D36ACF03246D815300A52046 /* model */,
-				D36ACEEC246D7F4000A52046 /* AppDelegate.swift */,
-				D36ACEEE246D7F4000A52046 /* SceneDelegate.swift */,
-				D36ACEF3246D7F4000A52046 /* ContentView.swift */,
-				D36ACEF5246D7F4200A52046 /* Assets.xcassets */,
-				D36ACEFA246D7F4200A52046 /* LaunchScreen.storyboard */,
-				D36ACEFD246D7F4200A52046 /* Info.plist */,
-				D36ACEF0246D7F4000A52046 /* spellbook.xcdatamodeld */,
 				D36ACEF7246D7F4200A52046 /* Preview Content */,
 			);
 			path = spellbook;
@@ -84,9 +79,38 @@
 		D36ACF03246D815300A52046 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				D36ACF04246D818000A52046 /* spells.json */,
+				D38933E2246F7E23006F02C2 /* data */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		D38933E0246F7DE5006F02C2 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				D36ACEF5246D7F4200A52046 /* Assets.xcassets */,
+				D36ACEFD246D7F4200A52046 /* Info.plist */,
+				D36ACEFA246D7F4200A52046 /* LaunchScreen.storyboard */,
+				D36ACEEC246D7F4000A52046 /* AppDelegate.swift */,
+			);
+			name = app;
+			sourceTree = "<group>";
+		};
+		D38933E1246F7E0C006F02C2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				D36ACEEE246D7F4000A52046 /* SceneDelegate.swift */,
+				D36ACEF3246D7F4000A52046 /* ContentView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		D38933E2246F7E23006F02C2 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				D36ACEF0246D7F4000A52046 /* spellbook.xcdatamodeld */,
+				D36ACF04246D818000A52046 /* spells.json */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
