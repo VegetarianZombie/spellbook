@@ -15,7 +15,18 @@
 		D36ACEF9246D7F4200A52046 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D36ACEF8246D7F4200A52046 /* Preview Assets.xcassets */; };
 		D36ACEFC246D7F4200A52046 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D36ACEFA246D7F4200A52046 /* LaunchScreen.storyboard */; };
 		D36ACF05246D818000A52046 /* spells.json in Resources */ = {isa = PBXBuildFile; fileRef = D36ACF04246D818000A52046 /* spells.json */; };
+		D38933EA246F7F06006F02C2 /* spellbookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38933E9246F7F06006F02C2 /* spellbookTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D38933EC246F7F06006F02C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D36ACEE1246D7F4000A52046 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D36ACEE8246D7F4000A52046;
+			remoteInfo = spellbook;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D36ACEE9246D7F4000A52046 /* spellbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spellbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,10 +39,20 @@
 		D36ACEFB246D7F4200A52046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D36ACEFD246D7F4200A52046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D36ACF04246D818000A52046 /* spells.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = spells.json; sourceTree = "<group>"; };
+		D38933E7246F7F06006F02C2 /* spellbookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spellbookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D38933E9246F7F06006F02C2 /* spellbookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spellbookTests.swift; sourceTree = "<group>"; };
+		D38933EB246F7F06006F02C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D36ACEE6246D7F4000A52046 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D38933E4246F7F06006F02C2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				D36ACEEB246D7F4000A52046 /* spellbook */,
+				D38933E8246F7F06006F02C2 /* spellbookTests */,
 				D36ACEEA246D7F4000A52046 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				D36ACEE9246D7F4000A52046 /* spellbook.app */,
+				D38933E7246F7F06006F02C2 /* spellbookTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,6 +136,15 @@
 			path = data;
 			sourceTree = "<group>";
 		};
+		D38933E8246F7F06006F02C2 /* spellbookTests */ = {
+			isa = PBXGroup;
+			children = (
+				D38933E9246F7F06006F02C2 /* spellbookTests.swift */,
+				D38933EB246F7F06006F02C2 /* Info.plist */,
+			);
+			path = spellbookTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -133,6 +165,24 @@
 			productReference = D36ACEE9246D7F4000A52046 /* spellbook.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D38933E6246F7F06006F02C2 /* spellbookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D38933EE246F7F06006F02C2 /* Build configuration list for PBXNativeTarget "spellbookTests" */;
+			buildPhases = (
+				D38933E3246F7F06006F02C2 /* Sources */,
+				D38933E4246F7F06006F02C2 /* Frameworks */,
+				D38933E5246F7F06006F02C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D38933ED246F7F06006F02C2 /* PBXTargetDependency */,
+			);
+			name = spellbookTests;
+			productName = spellbookTests;
+			productReference = D38933E7246F7F06006F02C2 /* spellbookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -145,6 +195,10 @@
 				TargetAttributes = {
 					D36ACEE8246D7F4000A52046 = {
 						CreatedOnToolsVersion = 11.4.1;
+					};
+					D38933E6246F7F06006F02C2 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = D36ACEE8246D7F4000A52046;
 					};
 				};
 			};
@@ -162,6 +216,7 @@
 			projectRoot = "";
 			targets = (
 				D36ACEE8246D7F4000A52046 /* spellbook */,
+				D38933E6246F7F06006F02C2 /* spellbookTests */,
 			);
 		};
 /* End PBXProject section */
@@ -175,6 +230,13 @@
 				D36ACEF9246D7F4200A52046 /* Preview Assets.xcassets in Resources */,
 				D36ACF05246D818000A52046 /* spells.json in Resources */,
 				D36ACEF6246D7F4200A52046 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D38933E5246F7F06006F02C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +254,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D38933E3246F7F06006F02C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D38933EA246F7F06006F02C2 /* spellbookTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D38933ED246F7F06006F02C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D36ACEE8246D7F4000A52046 /* spellbook */;
+			targetProxy = D38933EC246F7F06006F02C2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D36ACEFA246D7F4200A52046 /* LaunchScreen.storyboard */ = {
@@ -360,6 +438,46 @@
 			};
 			name = Release;
 		};
+		D38933EF246F7F06006F02C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QDKA3FBC46;
+				INFOPLIST_FILE = spellbookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jezner.spellbookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/spellbook.app/spellbook";
+			};
+			name = Debug;
+		};
+		D38933F0246F7F06006F02C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QDKA3FBC46;
+				INFOPLIST_FILE = spellbookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jezner.spellbookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/spellbook.app/spellbook";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -377,6 +495,15 @@
 			buildConfigurations = (
 				D36ACF01246D7F4200A52046 /* Debug */,
 				D36ACF02246D7F4200A52046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D38933EE246F7F06006F02C2 /* Build configuration list for PBXNativeTarget "spellbookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D38933EF246F7F06006F02C2 /* Debug */,
+				D38933F0246F7F06006F02C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
