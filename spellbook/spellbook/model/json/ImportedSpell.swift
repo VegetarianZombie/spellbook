@@ -15,7 +15,11 @@ struct ImportedSpell: Decodable {
   let effect: String
   let damageType: String
   let description: String
-  let referencedSpells: String
+  let referencedSpells: [String]
+  
+  enum ParsingError: Swift.Error {
+    case noComponents
+  }
   
   enum CodingKeys: String, CodingKey {
     case name
@@ -50,7 +54,6 @@ struct ImportedSpell: Decodable {
     case divination
     case enchantment
     case illusion
-    
   }
  
   init(from decoder: Decoder) throws {
@@ -69,16 +72,46 @@ struct ImportedSpell: Decodable {
     effect = try values.decode(String.self, forKey: .effect)
     damageType = try values.decode(String.self, forKey: .damageType)
     description = try values.decode(String.self, forKey: .description)
-    referencedSpells = try values.decode(String.self, forKey: .referencedSpells)
+    referencedSpells = ImportedSpell.parse(referencedSpells: try values.decode(String.self, forKey: .referencedSpells))
+  }
+
+  /// Converts string of spell names into an array of spell names
+  /// - Parameter referencedSpells: Takes a string of spell names separted by commas such as "Alert, Magic Missle, Light"
+  /// - Returns: An array of strings without whitespace
+  
+  static func parse(referencedSpells: String) -> [String] {
+    guard referencedSpells.isEmpty == false else {
+      return [] // empty array for an empty string
+    }
+    let extractedSpells = referencedSpells.split(separator: ",")
+    var formattedSpells = [String]()
+    if extractedSpells.count > 1 {
+      formattedSpells = extractedSpells.compactMap { spell in
+        spell.trimmingCharacters(in: .whitespaces)
+      }
+    } else {
+      // called when only one spell is passed as a parameter.
+      formattedSpells.append(referencedSpells.trimmingCharacters(in: .whitespaces))
+    }
+    return formattedSpells
   }
   
-  static func parse(components: String) -> [Components] {
+  /// Converts a string  to an array of components.
+  /// - Parameter components: A string of spell components such as "V, S, M"
+  /// - Returns: An array of components representing components
+  
+  static func parse(components: String) -> [Components]  {
     let individualComponents = components.split(separator: ",")
     let spellComponents = individualComponents.compactMap { component -> Components? in
       Components(rawValue: component.trimmingCharacters(in: .whitespaces).lowercased())
     }
+    assert(!spellComponents.isEmpty, "Every spell should have at least one component")
     return spellComponents
   }
+  
+  /// Converts a yes/no string into a boolean value
+  /// - Parameter yesNoValue: Take in a yes or no value
+  /// - Returns: Returns either a true or false value. False returns is the default return value
   
   static func parse(yesNoValue: String) -> Bool {
     if yesNoValue.lowercased() == "yes" {
