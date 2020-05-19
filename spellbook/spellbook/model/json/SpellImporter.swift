@@ -9,8 +9,8 @@ final class SpellImporter {
     self.jsonData = jsonData
   }
   
-  func importSpells() {
-    
+  func importSpells() throws {
+    spells = try JSONDecoder().decode([ImportedSpell].self, from: jsonData)
   }
   
 }

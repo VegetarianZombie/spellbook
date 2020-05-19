@@ -67,7 +67,7 @@ struct ImportedSpell: Decodable {
     duration = try values.decode(String.self, forKey: .duration)
     concentration = ImportedSpell.parse(yesNoValue: try values.decode(String.self, forKey: .concentration))
     ritual = ImportedSpell.parse(yesNoValue: try values.decode(String.self, forKey: .ritual))
-    school = School(rawValue: try values.decode(String.self, forKey: .school))! // if school doesn't exist, crash the import
+    school = School(rawValue: try values.decode(String.self, forKey: .school).lowercased())! // if school doesn't exist, crash the import
     save = try values.decode(String.self, forKey: .save)
     effect = try values.decode(String.self, forKey: .effect)
     damageType = try values.decode(String.self, forKey: .damageType)
