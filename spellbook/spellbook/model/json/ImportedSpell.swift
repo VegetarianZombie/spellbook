@@ -5,6 +5,7 @@ struct ImportedSpell: Decodable {
   let level: Int
   let castingTime: String
   let range: String
+  let area: String
   let components: [Components]
   let materials: String
   let duration: String
@@ -26,6 +27,7 @@ struct ImportedSpell: Decodable {
     case level
     case castingTime
     case range
+    case area
     case components
     case materials
     case duration
@@ -62,6 +64,7 @@ struct ImportedSpell: Decodable {
     level = try values.decode(Int.self, forKey: .level)
     castingTime = try values.decode(String.self, forKey: .castingTime)
     range = try values.decode(String.self, forKey: .range)
+    area = try values.decode(String.self, forKey: .area)
     components = ImportedSpell.parse(components: try values.decode(String.self, forKey: .components))
     materials = try values.decode(String.self, forKey: .materials)
     duration = try values.decode(String.self, forKey: .duration)
