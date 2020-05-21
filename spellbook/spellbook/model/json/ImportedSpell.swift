@@ -17,6 +17,7 @@ struct ImportedSpell: Decodable {
   let damageType: String
   let description: String
   let referencedSpells: [String]
+  var relatedSpells = [ImportedSpell]()
   
   enum ParsingError: Swift.Error {
     case noComponents
@@ -70,7 +71,7 @@ struct ImportedSpell: Decodable {
     duration = try values.decode(String.self, forKey: .duration)
     concentration = ImportedSpell.parse(yesNoValue: try values.decode(String.self, forKey: .concentration))
     ritual = ImportedSpell.parse(yesNoValue: try values.decode(String.self, forKey: .ritual))
-    school = School(rawValue: try values.decode(String.self, forKey: .school).lowercased())! // if school doesn't exist, crash the import
+    school = School(rawValue: try values.decode(String.self, forKey: .school).lowercased())! // if school doesn't exist, crash the import since data is invalid
     save = try values.decode(String.self, forKey: .save)
     effect = try values.decode(String.self, forKey: .effect)
     damageType = try values.decode(String.self, forKey: .damageType)
